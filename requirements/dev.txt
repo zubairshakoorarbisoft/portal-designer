@@ -12,7 +12,7 @@ asgiref==3.5.2
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.12.9
+astroid==2.12.10
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -21,7 +21,7 @@ attrs==22.1.0
     # via
     #   -r requirements/quality.txt
     #   pytest
-beautifulsoup4==4.9.3
+beautifulsoup4==4.11.1
     # via
     #   -r requirements/quality.txt
     #   wagtail
@@ -29,7 +29,7 @@ build==0.8.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-certifi==2022.9.14
+certifi==2022.9.24
     # via
     #   -r requirements/quality.txt
     #   requests
@@ -87,7 +87,7 @@ defusedxml==0.7.1
     #   -r requirements/quality.txt
     #   python3-openid
     #   social-auth-core
-diff-cover==6.5.1
+diff-cover==7.0.1
     # via -r requirements/dev.in
 dill==0.3.5.1
     # via
@@ -107,6 +107,8 @@ django==3.2.15
     #   django-debug-toolbar
     #   django-extensions
     #   django-filter
+    #   django-modelcluster
+    #   django-permissionedforms
     #   django-storages
     #   django-taggit
     #   django-treebeard
@@ -126,23 +128,27 @@ django-crum==0.7.9
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-django-debug-toolbar==3.6.0
+django-debug-toolbar==3.7.0
     # via -r requirements/dev.in
 django-dynamic-fixture==3.1.2
     # via -r requirements/quality.txt
 django-extensions==3.2.1
     # via -r requirements/quality.txt
-django-filter==21.1
+django-filter==22.1
     # via
     #   -r requirements/quality.txt
     #   wagtail
-django-modelcluster==5.3
+django-modelcluster==6.0
+    # via
+    #   -r requirements/quality.txt
+    #   wagtail
+django-permissionedforms==0.1
     # via
     #   -r requirements/quality.txt
     #   wagtail
 django-storages==1.13.1
     # via -r requirements/quality.txt
-django-taggit==2.1.0
+django-taggit==3.0.0
     # via
     #   -r requirements/quality.txt
     #   wagtail
@@ -155,7 +161,7 @@ django-waffle==3.0.0
     #   -r requirements/quality.txt
     #   edx-django-utils
     #   edx-drf-extensions
-djangorestframework==3.13.1
+djangorestframework==3.14.0
     # via
     #   -r requirements/quality.txt
     #   drf-jwt
@@ -181,7 +187,7 @@ edx-auth-backends==4.1.0
     # via -r requirements/quality.txt
 edx-django-release-util==1.2.0
     # via -r requirements/quality.txt
-edx-django-utils==5.0.1
+edx-django-utils==5.1.0
     # via
     #   -r requirements/quality.txt
     #   edx-drf-extensions
@@ -206,7 +212,7 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.1
     # via -r requirements/quality.txt
-faker==14.2.0
+faker==14.2.1
     # via
     #   -r requirements/quality.txt
     #   factory-boy
@@ -292,7 +298,7 @@ packaging==21.3
     #   drf-yasg
     #   pytest
     #   tox
-path==16.4.0
+path==16.5.0
     # via edx-i18n-tools
 pbr==5.10.0
     # via
@@ -352,7 +358,7 @@ pyjwkest==1.4.2
     # via
     #   -r requirements/quality.txt
     #   edx-drf-extensions
-pyjwt[crypto]==2.4.0
+pyjwt[crypto]==2.5.0
     # via
     #   -r requirements/quality.txt
     #   drf-jwt
@@ -360,7 +366,7 @@ pyjwt[crypto]==2.4.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.15.2
+pylint==2.15.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -491,7 +497,7 @@ soupsieve==2.3.2.post1
     # via
     #   -r requirements/quality.txt
     #   beautifulsoup4
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via
     #   -r requirements/quality.txt
     #   django
@@ -530,6 +536,10 @@ tomlkit==0.11.4
     #   pylint
 tox==3.26.0
     # via -r requirements/quality.txt
+types-cryptography==3.3.23
+    # via
+    #   -r requirements/quality.txt
+    #   pyjwt
 typing-extensions==4.3.0
     # via
     #   -r requirements/quality.txt
@@ -549,10 +559,8 @@ virtualenv==20.16.5
     # via
     #   -r requirements/quality.txt
     #   tox
-wagtail==2.16.3
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/quality.txt
+wagtail==4.0.2
+    # via -r requirements/quality.txt
 webencodings==0.5.1
     # via
     #   -r requirements/quality.txt

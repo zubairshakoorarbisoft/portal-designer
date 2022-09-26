@@ -8,9 +8,9 @@ anyascii==0.3.1
     # via wagtail
 asgiref==3.5.2
     # via django
-beautifulsoup4==4.9.3
+beautifulsoup4==4.11.1
     # via wagtail
-certifi==2022.9.14
+certifi==2022.9.24
     # via requests
 cffi==1.15.1
     # via
@@ -43,6 +43,8 @@ django==3.2.15
     #   django-crum
     #   django-extensions
     #   django-filter
+    #   django-modelcluster
+    #   django-permissionedforms
     #   django-storages
     #   django-taggit
     #   django-treebeard
@@ -61,13 +63,15 @@ django-crum==0.7.9
     # via edx-django-utils
 django-extensions==3.2.1
     # via -r requirements/base.in
-django-filter==21.1
+django-filter==22.1
     # via wagtail
-django-modelcluster==5.3
+django-modelcluster==6.0
+    # via wagtail
+django-permissionedforms==0.1
     # via wagtail
 django-storages==1.13.1
     # via -r requirements/base.in
-django-taggit==2.1.0
+django-taggit==3.0.0
     # via wagtail
 django-treebeard==4.5.1
     # via wagtail
@@ -76,7 +80,7 @@ django-waffle==3.0.0
     #   -r requirements/base.in
     #   edx-django-utils
     #   edx-drf-extensions
-djangorestframework==3.13.1
+djangorestframework==3.14.0
     # via
     #   -r requirements/base.in
     #   drf-jwt
@@ -98,7 +102,7 @@ edx-auth-backends==4.1.0
     # via -r requirements/base.in
 edx-django-release-util==1.2.0
     # via -r requirements/base.in
-edx-django-utils==5.0.1
+edx-django-utils==5.1.0
     # via
     #   -r requirements/base.in
     #   edx-drf-extensions
@@ -159,7 +163,7 @@ pydantic==1.10.2
     # via inflect
 pyjwkest==1.4.2
     # via edx-drf-extensions
-pyjwt[crypto]==2.4.0
+pyjwt[crypto]==2.5.0
     # via
     #   drf-jwt
     #   edx-auth-backends
@@ -228,7 +232,7 @@ social-auth-core==4.3.0
     #   social-auth-app-django
 soupsieve==2.3.2.post1
     # via beautifulsoup4
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via django
 stevedore==4.0.0
     # via
@@ -238,6 +242,8 @@ tablib[xls,xlsx]==3.2.1
     # via wagtail
 telepath==0.3
     # via wagtail
+types-cryptography==3.3.23
+    # via pyjwt
 typing-extensions==4.3.0
     # via pydantic
 uritemplate==4.1.1
@@ -246,10 +252,8 @@ uritemplate==4.1.1
     #   drf-yasg
 urllib3==1.26.12
     # via requests
-wagtail==2.16.3
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/base.in
+wagtail==4.0.2
+    # via -r requirements/base.in
 webencodings==0.5.1
     # via html5lib
 willow==1.4.1
