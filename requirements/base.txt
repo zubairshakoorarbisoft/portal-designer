@@ -92,7 +92,7 @@ draftjs-exporter==2.1.7
     # via wagtail
 drf-jwt==1.19.2
     # via edx-drf-extensions
-drf-yasg==1.21.3
+drf-yasg==1.21.4
     # via
     #   -r requirements/base.in
     #   edx-api-doc-tools

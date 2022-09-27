@@ -177,7 +177,7 @@ drf-jwt==1.19.2
     # via
     #   -r requirements/quality.txt
     #   edx-drf-extensions
-drf-yasg==1.21.3
+drf-yasg==1.21.4
     # via
     #   -r requirements/quality.txt
     #   edx-api-doc-tools
@@ -212,7 +212,7 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.1
     # via -r requirements/quality.txt
-faker==14.2.1
+faker==15.0.0
     # via
     #   -r requirements/quality.txt
     #   factory-boy
