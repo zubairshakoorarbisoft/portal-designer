@@ -25,7 +25,7 @@ attrs==22.1.0
     #   pytest
 babel==2.10.3
     # via sphinx
-beautifulsoup4==4.11.1
+beautifulsoup4==4.9.3
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -100,8 +100,6 @@ django==3.2.15
     #   django-crum
     #   django-extensions
     #   django-filter
-    #   django-modelcluster
-    #   django-permissionedforms
     #   django-storages
     #   django-taggit
     #   django-treebeard
@@ -124,21 +122,17 @@ django-dynamic-fixture==3.1.2
     # via -r requirements/test.txt
 django-extensions==3.2.1
     # via -r requirements/test.txt
-django-filter==22.1
+django-filter==21.1
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-modelcluster==6.0
-    # via
-    #   -r requirements/test.txt
-    #   wagtail
-django-permissionedforms==0.1
+django-modelcluster==5.3
     # via
     #   -r requirements/test.txt
     #   wagtail
 django-storages==1.13.1
     # via -r requirements/test.txt
-django-taggit==3.0.0
+django-taggit==2.1.0
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -564,7 +558,7 @@ virtualenv==20.16.5
     # via
     #   -r requirements/test.txt
     #   tox
-wagtail==4.0.2
+wagtail==2.16.3
     # via -r requirements/test.txt
 webencodings==0.5.1
     # via

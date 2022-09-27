@@ -8,7 +8,7 @@ anyascii==0.3.1
     # via wagtail
 asgiref==3.5.2
     # via django
-beautifulsoup4==4.11.1
+beautifulsoup4==4.9.3
     # via wagtail
 certifi==2022.9.24
     # via requests
@@ -43,8 +43,6 @@ django==3.2.15
     #   django-crum
     #   django-extensions
     #   django-filter
-    #   django-modelcluster
-    #   django-permissionedforms
     #   django-storages
     #   django-taggit
     #   django-treebeard
@@ -63,15 +61,13 @@ django-crum==0.7.9
     # via edx-django-utils
 django-extensions==3.2.1
     # via -r requirements/base.in
-django-filter==22.1
+django-filter==21.1
     # via wagtail
-django-modelcluster==6.0
-    # via wagtail
-django-permissionedforms==0.1
+django-modelcluster==5.3
     # via wagtail
 django-storages==1.13.1
     # via -r requirements/base.in
-django-taggit==3.0.0
+django-taggit==2.1.0
     # via wagtail
 django-treebeard==4.5.1
     # via wagtail
@@ -252,8 +248,10 @@ uritemplate==4.1.1
     #   drf-yasg
 urllib3==1.26.12
     # via requests
-wagtail==4.0.2
-    # via -r requirements/base.in
+wagtail==2.16.3
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/base.in
 webencodings==0.5.1
     # via html5lib
 willow==1.4.1
