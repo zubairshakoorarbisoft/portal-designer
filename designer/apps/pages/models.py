@@ -40,7 +40,7 @@ class ProgramPage(Page):
     subpage_types = []
 
     content_panels = Page.content_panels + [
-        FieldPanel('uuid', classname="full"),
+        FieldPanel(field_name='uuid', classname="full"),
         InlinePanel('external_program_website', label="External Program Website", max_num=1),
         InlinePanel('program_documents', label="Program Documents", max_num=1),
         InlinePanel('branding', label="Program Page Branding", max_num=1),
@@ -95,6 +95,7 @@ class ExternalProgramWebsite(models.Model):
         default='Manage Your Degree'
     )
     description = FieldPanel(
+        field_name='description',
         max_length=512,
         verbose_name='description',
         blank=False,
@@ -117,13 +118,13 @@ class ExternalProgramWebsite(models.Model):
     page = ParentalKey(ProgramPage, on_delete=models.CASCADE, related_name='external_program_website', unique=True)
 
     panels = [
-        FieldPanel('display'),
-        FieldPanel('header'),
-        FieldPanel('description'),
+        FieldPanel(field_name='display'),
+        FieldPanel(field_name='header'),
+        FieldPanel(field_name='description'),
         MultiFieldPanel(
             [
-                FieldPanel('link_display_text'),
-                FieldPanel('link_url'),
+                FieldPanel(field_name='link_display_text'),
+                FieldPanel(field_name='link_url'),
             ],
             heading='Link to Homepage',
             classname='collapsible',
@@ -175,9 +176,9 @@ class ProgramDocuments(models.Model):
     page = ParentalKey(ProgramPage, on_delete=models.CASCADE, related_name='program_documents', unique=True)
 
     panels = [
-        FieldPanel('display'),
-        FieldPanel('header'),
-        FieldPanel('documents'),
+        FieldPanel(field_name='display'),
+        FieldPanel(field_name='header'),
+        FieldPanel(field_name='documents'),
     ]
 
 
@@ -207,8 +208,8 @@ class ProgramPageBranding(Branding):
     )
 
     panels = Branding.panels + [
-        FieldPanel('cover_image'),
-        FieldPanel('texture_image'),
+        FieldPanel(field_name='cover_image'),
+        FieldPanel(field_name='texture_image'),
     ]
 
 
@@ -228,9 +229,9 @@ class EnterprisePage(Page):
     subpage_types = []
 
     content_panels = Page.content_panels + [
-        FieldPanel('uuid', classname="full"),
-        FieldPanel('contact_email', classname="full"),
-        InlinePanel('branding', label="Enterprise Page Branding", max_num=1),
+        FieldPanel(field_name='uuid', classname="full"),
+        FieldPanel(field_name='contact_email', classname="full"),
+        InlinePanel(field_name='branding', label="Enterprise Page Branding", max_num=1),
     ]
 
     @classmethod
@@ -260,5 +261,5 @@ class EnterprisePageBranding(Branding):
     )
 
     panels = Branding.panels + [
-        FieldPanel('banner_background_color'),
+        FieldPanel(field_name='banner_background_color'),
     ]
