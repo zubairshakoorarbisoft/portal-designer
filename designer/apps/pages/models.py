@@ -5,12 +5,10 @@ from modelcluster.fields import ParentalKey
 from wagtail.admin.panels import (
     FieldPanel,
     InlinePanel,
-    StreamFieldPanel,
     # RichTextField,
-    RichTextFieldPanel,
     MultiFieldPanel,
 )
-from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.images.edit_handlers import FieldPanel
 from wagtail.blocks import CharBlock, StructBlock, URLBlock
 from wagtail.fields import StreamField
 from wagtail.models import Page
@@ -122,7 +120,7 @@ class ExternalProgramWebsite(models.Model):
     panels = [
         FieldPanel('display'),
         FieldPanel('header'),
-        RichTextFieldPanel('description'),
+        FieldPanel('description'),
         MultiFieldPanel(
             [
                 FieldPanel('link_display_text'),
@@ -179,7 +177,7 @@ class ProgramDocuments(models.Model):
     panels = [
         FieldPanel('display'),
         FieldPanel('header'),
-        StreamFieldPanel('documents'),
+        FieldPanel('documents'),
     ]
 
 
@@ -209,8 +207,8 @@ class ProgramPageBranding(Branding):
     )
 
     panels = Branding.panels + [
-        ImageChooserPanel('cover_image'),
-        ImageChooserPanel('texture_image'),
+        FieldPanel('cover_image'),
+        FieldPanel('texture_image'),
     ]
 
 
