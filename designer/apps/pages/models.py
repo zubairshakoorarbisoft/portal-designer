@@ -5,9 +5,6 @@ from modelcluster.fields import ParentalKey
 from wagtail.admin.panels import (
     FieldPanel,
     InlinePanel,
-    FieldPanel,
-    RichTextField,
-    FieldPanel,
     MultiFieldPanel,
 )
 from wagtail.images.edit_handlers import FieldPanel
@@ -97,7 +94,7 @@ class ExternalProgramWebsite(models.Model):
         null=False,
         default='Manage Your Degree'
     )
-    description = RichTextField(
+    description = FieldPanel(
         max_length=512,
         verbose_name='description',
         blank=False,
