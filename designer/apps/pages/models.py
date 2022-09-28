@@ -18,6 +18,8 @@ from wagtail.images.models import Image
 from designer.apps.branding.models import Branding
 from designer.apps.branding.utils import validate_hexadecimal_color
 from designer.apps.pages.utils import is_valid_child_page
+import wagtail.fields
+
 
 
 class IndexPage(Page):
@@ -95,14 +97,14 @@ class ExternalProgramWebsite(models.Model):
         null=False,
         default='Manage Your Degree'
     )
-    # description = RichTextField(
-    #     max_length=512,
-    #     verbose_name='description',
-    #     blank=False,
-    #     null=False,
-    #     features=('bold', 'italic', 'ol', 'ul'),
-    #     default=DEFAULT_DESCRIPTION,
-    # )
+    description = wagtail.fields.RichTextField(
+        max_length=512,
+        verbose_name='description',
+        blank=False,
+        null=False,
+        features=('bold', 'italic', 'ol', 'ul'),
+        default=DEFAULT_DESCRIPTION,
+    )
     link_display_text = models.CharField(
         blank=False,
         null=False,
@@ -169,7 +171,8 @@ class ProgramDocuments(models.Model):
             ))
         ],
         blank=True,
-        verbose_name="Documents"
+        verbose_name="Documents",
+        use_json_field=True
     )
 
     page = ParentalKey(ProgramPage, on_delete=models.CASCADE, related_name='program_documents', unique=True)
