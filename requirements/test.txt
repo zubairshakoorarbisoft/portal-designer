@@ -12,7 +12,7 @@ asgiref==3.5.2
     # via
     #   -r requirements/base.txt
     #   django
-astroid==2.12.9
+astroid==2.12.10
     # via
     #   pylint
     #   pylint-celery
@@ -22,7 +22,7 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-certifi==2022.9.14
+certifi==2022.9.24
     # via
     #   -r requirements/base.txt
     #   requests
@@ -86,6 +86,8 @@ distlib==0.3.6
     #   django-crum
     #   django-extensions
     #   django-filter
+    #   django-modelcluster
+    #   django-permissionedforms
     #   django-storages
     #   django-taggit
     #   django-treebeard
@@ -112,7 +114,11 @@ django-filter==21.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-modelcluster==5.3
+django-modelcluster==6.0
+    # via
+    #   -r requirements/base.txt
+    #   wagtail
+django-permissionedforms==0.1
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -131,7 +137,7 @@ django-waffle==3.0.0
     #   -r requirements/base.txt
     #   edx-django-utils
     #   edx-drf-extensions
-djangorestframework==3.13.1
+djangorestframework==3.14.0
     # via
     #   -r requirements/base.txt
     #   drf-jwt
@@ -147,7 +153,7 @@ drf-jwt==1.19.2
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
-drf-yasg==1.21.3
+drf-yasg==1.21.4
     # via
     #   -r requirements/base.txt
     #   edx-api-doc-tools
@@ -157,7 +163,7 @@ edx-auth-backends==4.1.0
     # via -r requirements/base.txt
 edx-django-release-util==1.2.0
     # via -r requirements/base.txt
-edx-django-utils==5.0.1
+edx-django-utils==5.1.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -180,7 +186,7 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.1
     # via -r requirements/test.in
-faker==14.2.0
+faker==15.0.0
     # via
     #   -r requirements/test.in
     #   factory-boy
@@ -237,7 +243,7 @@ mock==4.0.3
     #   -r requirements/test.in
 mysqlclient==2.1.1
     # via -r requirements/base.txt
-newrelic==8.1.0.180
+newrelic==8.2.0.181
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -296,7 +302,7 @@ pyjwkest==1.4.2
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
-pyjwt[crypto]==2.4.0
+pyjwt[crypto]==2.5.0
     # via
     #   -r requirements/base.txt
     #   drf-jwt
@@ -304,7 +310,7 @@ pyjwt[crypto]==2.4.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.15.2
+pylint==2.15.3
     # via
     #   edx-lint
     #   pylint-celery
@@ -421,7 +427,7 @@ soupsieve==2.3.2.post1
     # via
     #   -r requirements/base.txt
     #   beautifulsoup4
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via
     #   -r requirements/base.txt
     #   django
@@ -447,10 +453,14 @@ tomli==2.0.1
     #   pylint
     #   pytest
     #   tox
-tomlkit==0.11.4
+tomlkit==0.11.5
     # via pylint
 tox==3.26.0
     # via -r requirements/test.in
+types-cryptography==3.3.23
+    # via
+    #   -r requirements/base.txt
+    #   pyjwt
 typing-extensions==4.3.0
     # via
     #   -r requirements/base.txt
@@ -468,7 +478,7 @@ urllib3==1.26.12
     #   requests
 virtualenv==20.16.5
     # via tox
-wagtail==2.16.3
+wagtail==3.0
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
