@@ -6,7 +6,7 @@ from wagtail.admin.panels import (
     FieldPanel,
     InlinePanel,
     StreamFieldPanel,
-    RichTextField,
+    # RichTextField,
     RichTextFieldPanel,
     MultiFieldPanel,
 )
@@ -97,14 +97,14 @@ class ExternalProgramWebsite(models.Model):
         null=False,
         default='Manage Your Degree'
     )
-    description = RichTextField(
-        max_length=512,
-        verbose_name='description',
-        blank=False,
-        null=False,
-        features=('bold', 'italic', 'ol', 'ul'),
-        default=DEFAULT_DESCRIPTION,
-    )
+    # description = RichTextField(
+    #     max_length=512,
+    #     verbose_name='description',
+    #     blank=False,
+    #     null=False,
+    #     features=('bold', 'italic', 'ol', 'ul'),
+    #     default=DEFAULT_DESCRIPTION,
+    # )
     link_display_text = models.CharField(
         blank=False,
         null=False,
