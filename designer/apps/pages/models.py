@@ -2,7 +2,7 @@
 import re
 from django.db import models
 from modelcluster.fields import ParentalKey
-from wagtail.admin.edit_handlers import (
+from wagtail.admin.panels import (
     FieldPanel,
     InlinePanel,
     StreamFieldPanel,
@@ -11,9 +11,9 @@ from wagtail.admin.edit_handlers import (
     MultiFieldPanel,
 )
 from wagtail.images.edit_handlers import ImageChooserPanel
-from wagtail.core.blocks import CharBlock, StructBlock, URLBlock
-from wagtail.core.fields import StreamField
-from wagtail.core.models import Page
+from wagtail.blocks import CharBlock, StructBlock, URLBlock
+from wagtail.fields import StreamField
+from wagtail.models import Page
 from wagtail.documents.blocks import DocumentChooserBlock
 from wagtail.images.models import Image
 
