@@ -6,7 +6,7 @@ from wagtail.admin.panels import (
     FieldPanel,
     InlinePanel,
     StreamFieldPanel,
-    RichTextField,
+    # RichTextField,
     RichTextFieldPanel,
     MultiFieldPanel,
 )
@@ -16,6 +16,7 @@ from wagtail.fields import StreamField
 from wagtail.models import Page
 from wagtail.documents.blocks import DocumentChooserBlock
 from wagtail.images.models import Image
+from wagtail.fields import RichTextField
 
 from designer.apps.branding.models import Branding
 from designer.apps.branding.utils import validate_hexadecimal_color
@@ -97,14 +98,15 @@ class ExternalProgramWebsite(models.Model):
         null=False,
         default='Manage Your Degree'
     )
-    description = RichTextField(
-        max_length=512,
-        verbose_name='description',
-        blank=False,
-        null=False,
-        features=('bold', 'italic', 'ol', 'ul'),
-        default=DEFAULT_DESCRIPTION,
-    )
+    # description = RichTextField(
+    #     max_length=512,
+    #     verbose_name='description',
+    #     blank=False,
+    #     null=False,
+    #     features=('bold', 'italic', 'ol', 'ul'),
+    #     default=DEFAULT_DESCRIPTION,
+    # )
+    description = RichTextField()
     link_display_text = models.CharField(
         blank=False,
         null=False,
