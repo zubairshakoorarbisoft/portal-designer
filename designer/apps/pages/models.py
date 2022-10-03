@@ -169,7 +169,8 @@ class ProgramDocuments(models.Model):
             ))
         ],
         blank=True,
-        verbose_name="Documents"
+        verbose_name="Documents",
+        use_json_field=True
     )
 
     page = ParentalKey(ProgramPage, on_delete=models.CASCADE, related_name='program_documents', unique=True)

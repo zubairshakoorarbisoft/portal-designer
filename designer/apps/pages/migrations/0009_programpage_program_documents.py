@@ -16,6 +16,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='programpage',
             name='program_documents',
-            field=wagtail.fields.StreamField((('file', wagtail.blocks.StructBlock((('display_text', wagtail.blocks.CharBlock()), ('document', wagtail.documents.blocks.DocumentChooserBlock())), icon='doc-full')), ('link', wagtail.blocks.StructBlock((('display_text', wagtail.blocks.CharBlock()), ('url', wagtail.blocks.URLBlock())), icon='link'))), blank=True, verbose_name='Program Documents'),
+            field=wagtail.fields.StreamField((('file', wagtail.blocks.StructBlock((('display_text', wagtail.blocks.CharBlock()), ('document', wagtail.documents.blocks.DocumentChooserBlock())), icon='doc-full')), ('link', wagtail.blocks.StructBlock((('display_text', wagtail.blocks.CharBlock()), ('url', wagtail.blocks.URLBlock())), icon='link'))), blank=True, verbose_name='Program Documents', use_json_field=True),
         ),
     ]
