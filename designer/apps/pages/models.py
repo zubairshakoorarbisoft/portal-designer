@@ -102,7 +102,11 @@ class ExternalProgramWebsite(models.Model):
     #     features=('bold', 'italic', 'ol', 'ul'),
     #     default=DEFAULT_DESCRIPTION,
     # )
-    description = RichTextField()
+    description = RichTextField(
+        default=DEFAULT_DESCRIPTION,
+        max_length=512,
+        verbose_name='description'
+    ),
     link_display_text = models.CharField(
         blank=False,
         null=False,
