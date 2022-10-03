@@ -103,10 +103,10 @@ class ExternalProgramWebsite(models.Model):
     #     default=DEFAULT_DESCRIPTION,
     # )
     description = RichTextField(
-        default="<p>Go to your program's portal to:</p><ul><li>Add or drop courses</li><li>Finance Department</li><li>Contact an advisor</li><li>Get your grade</li><li>Program wide discussions</li><li>and more</li></ul>",
+        default=DEFAULT_DESCRIPTION,
         max_length=512,
         verbose_name='description'
-    ),
+    )
     link_display_text = models.CharField(
         blank=False,
         null=False,
