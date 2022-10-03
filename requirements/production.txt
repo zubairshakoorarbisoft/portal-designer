@@ -12,7 +12,7 @@ asgiref==3.5.2
     # via
     #   -r requirements/base.txt
     #   django
-beautifulsoup4==4.11.1
+beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -87,7 +87,7 @@ django-crum==0.7.9
     #   edx-django-utils
 django-extensions==3.2.1
     # via -r requirements/base.txt
-django-filter==22.1
+django-filter==21.1
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -101,7 +101,7 @@ django-permissionedforms==0.1
     #   wagtail
 django-storages==1.13.1
     # via -r requirements/base.txt
-django-taggit==3.0.0
+django-taggit==2.1.0
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -386,7 +386,7 @@ urllib3==1.26.12
     #   -r requirements/base.txt
     #   botocore
     #   requests
-wagtail==4.0.2
+wagtail==3.0.3
     # via -r requirements/base.txt
 webencodings==0.5.1
     # via

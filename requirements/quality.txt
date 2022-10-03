@@ -21,7 +21,7 @@ attrs==22.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
-beautifulsoup4==4.11.1
+beautifulsoup4==4.9.3
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -118,7 +118,7 @@ django-dynamic-fixture==3.1.2
     # via -r requirements/test.txt
 django-extensions==3.2.1
     # via -r requirements/test.txt
-django-filter==22.1
+django-filter==21.1
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -132,7 +132,7 @@ django-permissionedforms==0.1
     #   wagtail
 django-storages==1.13.1
     # via -r requirements/test.txt
-django-taggit==3.0.0
+django-taggit==2.1.0
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -518,7 +518,7 @@ virtualenv==20.16.5
     # via
     #   -r requirements/test.txt
     #   tox
-wagtail==4.0.2
+wagtail==3.0.3
     # via -r requirements/test.txt
 webencodings==0.5.1
     # via
