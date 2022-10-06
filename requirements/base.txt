@@ -43,6 +43,8 @@ django==3.2.15
     #   django-crum
     #   django-extensions
     #   django-filter
+    #   django-modelcluster
+    #   django-permissionedforms
     #   django-storages
     #   django-taggit
     #   django-treebeard
@@ -63,7 +65,9 @@ django-extensions==3.2.1
     # via -r requirements/base.in
 django-filter==21.1
     # via wagtail
-django-modelcluster==5.3
+django-modelcluster==6.0
+    # via wagtail
+django-permissionedforms==0.1
     # via wagtail
 django-storages==1.13.1
     # via -r requirements/base.in
@@ -248,7 +252,7 @@ uritemplate==4.1.1
     #   drf-yasg
 urllib3==1.26.12
     # via requests
-wagtail==2.16.3
+wagtail==3.0.3
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
